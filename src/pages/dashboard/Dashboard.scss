@@ -4,13 +4,18 @@
 @media only screen and (max-width: 639px) {
   .dashboard {
     display: grid;
-    padding: 1rem;
-    grid-template-rows: auto;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: repeat(8, 1fr);
     grid-template-columns: 100%;
     grid-template-areas:
       "header"
-      "overview"
       "chart"
+      "chart"
+      "chart"
+      "chart"
+      "overview"
+      "details"
       "details";
   }
 }
@@ -32,35 +37,47 @@
 
 .header {
   grid-area: header;
-  padding: 1rem;
+  margin: 1rem;
 }
 .chart {
   grid-area: chart;
-  padding: 1rem;
+  margin: 1rem;
 }
 .overview {
   grid-area: overview;
-  padding: 1rem;
+  margin: 1rem;
 }
 .details {
   grid-area: details;
-  padding: 1rem;
+  margin: 1rem;
 }
 @media only screen and (max-width: 639px) {
   .header {
     grid-area: header;
-    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   .chart {
     grid-area: chart;
-    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   .overview {
     grid-area: overview;
-    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   .details {
     grid-area: details;
-    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
