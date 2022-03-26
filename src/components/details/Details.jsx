@@ -7,7 +7,7 @@ export default function Details({ details }) {
     name: "Name",
     country: "Country",
     currency: "Currency",
-    exchage: "Exchange",
+    exchange: "Exchange",
     ipo: "IPO Date",
     marketCapitalization: "Market Capitalization",
     finnhubIndustry: "Industry",
