@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Search.scss";
 import { mockSearchResults } from "../../constants/mock";
-import { XIcon, SearchIcon } from "@heroicons/react/solid";
 
 export default function Search() {
   const [input, setInput] = useState("");
@@ -16,10 +15,10 @@ export default function Search() {
     setBestMatches(mockSearchResults.result);
   };
   return (
-    <div>
+    <span className="searchbar">
+      <i className="pi pi-search icon" />
       <input
         type="text"
-        className="input"
         value={input}
         placeholder="Search stock..."
         onChange={(event) => {
@@ -30,10 +29,12 @@ export default function Search() {
             updateBestMatches();
           }
         }}
-      ></input>
-      <button>
-        <XIcon />
-      </button>
-    </div>
+      />
+      {input && (
+        <button>
+          <i className="pi pi-times icon" onClick={clear} />
+        </button>
+      )}
+    </span>
   );
 }
