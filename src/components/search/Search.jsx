@@ -16,9 +16,9 @@ export default function Search() {
   };
   return (
     <span className="searchbar">
-      <i className="pi pi-search icon" />
       <input
         type="text"
+        className="input"
         value={input}
         placeholder="Search stock..."
         onChange={(event) => {
@@ -30,11 +30,18 @@ export default function Search() {
           }
         }}
       />
-      {input && (
-        <button>
-          <i className="pi pi-times icon" onClick={clear} />
+      <div className="icon">
+        {input && (
+          <button>
+            <i className="pi pi-times clear-icon" onClick={clear} />
+          </button>
+        )}
+      </div>
+      <div className="search">
+        <button onClick={updateBestMatches}>
+          <i className="pi pi-search search-icon" />
         </button>
-      )}
+      </div>
     </span>
   );
 }

@@ -9,26 +9,29 @@
 }
 .searchbar {
   position: relative;
-  display: flex;
+  display: grid;
   border: 2px solid rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.1);
   margin-top: 1rem;
   border-radius: 10px;
-  width: 30rem;
+  width: 25rem;
   height: 2rem;
-  padding: 0.8rem;
+  padding: 0.5rem;
   color: #fff;
   font-size: 1.2rem;
   font-weight: 300;
   overflow: hidden;
   align-items: center;
+  grid-template-areas: "input  icon  search";
+  grid-template-columns: 5fr 0.5fr 0.5fr;
 }
-input:focus {
+.input:focus {
   border: none;
   outline: none;
 }
 
-input {
+.input {
+  grid-area: input;
   margin-left: 1rem;
   width: 85%;
   height: fit-content;
@@ -43,5 +46,20 @@ button {
   cursor: pointer;
 }
 .icon {
+  grid-area: icon;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.clear-icon {
+  font-size: 25px;
+}
+.search {
+  grid-area: search;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.search-icon {
   font-size: 25px;
 }
