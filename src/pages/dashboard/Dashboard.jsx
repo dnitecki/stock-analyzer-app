@@ -3,6 +3,7 @@ import "./Dashboard.scss";
 import Card from "../../components/card/Card";
 import Header from "../../components/header/Header";
 import { mockCompanyDetails } from "../../constants/mock";
+import Details from "../../components/details/Details";
 
 export default function Dashboard() {
   return (
@@ -18,7 +19,7 @@ export default function Dashboard() {
           <Card>Overview</Card>
         </div>
         <div className="details">
-          <Card>Details</Card>
+          <Details details={mockCompanyDetails} />
         </div>
       </div>
     </div>
