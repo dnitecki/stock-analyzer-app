@@ -1,0 +1,31 @@
+.resultsList {
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  list-style: none;
+  overflow-y: auto;
+  max-height: 10rem;
+  padding: 0;
+  width: 25rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 0.5rem;
+  backdrop-filter: blur(8px);
+}
+// .resultsList::before {
+//   content: "";
+//   filter: blur(8px);
+// }
+.resultsItem {
+  cursor: pointer;
+  display: flexbox;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.resultsItem:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+span {
+  //   color: #000 !important;
+}
