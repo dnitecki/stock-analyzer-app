@@ -1,0 +1,66 @@
+.body {
+  display: block;
+}
+@media only screen and (max-width: 639px) {
+  .dashboard {
+    display: grid;
+    padding: 1rem;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "overview"
+      "chart"
+      "details";
+  }
+}
+@media only screen and (min-width: 640px) {
+  .dashboard {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header  header"
+      "chart  chart   overview"
+      "chart  chart   details"
+      "chart  chart   details"
+      "chart  chart   details";
+  }
+}
+
+.header {
+  grid-area: header;
+  padding: 1rem;
+}
+.chart {
+  grid-area: chart;
+  padding: 1rem;
+}
+.overview {
+  grid-area: overview;
+  padding: 1rem;
+}
+.details {
+  grid-area: details;
+  padding: 1rem;
+}
+@media only screen and (max-width: 639px) {
+  .header {
+    grid-area: header;
+    padding: 0.5rem;
+  }
+  .chart {
+    grid-area: chart;
+    padding: 0.5rem;
+  }
+  .overview {
+    grid-area: overview;
+    padding: 0.5rem;
+  }
+  .details {
+    grid-area: details;
+    padding: 0.5rem;
+  }
+}
