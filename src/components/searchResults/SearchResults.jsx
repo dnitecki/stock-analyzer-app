@@ -7,8 +7,10 @@ export default function SearchResults({ results }) {
       {results.map((item) => {
         return (
           <li key={item.symbol} className="resultsItem">
-            <span>{item.symbol}</span>
-            <span>{item.description}</span>
+            <div className="results">
+              <span>{item.symbol}</span>
+              <span>{item.description}</span>
+            </div>
           </li>
         );
       })}

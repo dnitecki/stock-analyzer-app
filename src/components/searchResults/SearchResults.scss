@@ -6,16 +6,13 @@
   overflow-y: auto;
   max-height: 10rem;
   padding: 0;
-  width: 25rem;
+  width: auto;
   border: 2px solid rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0);
   margin-top: 0.5rem;
   backdrop-filter: blur(8px);
 }
-// .resultsList::before {
-//   content: "";
-//   filter: blur(8px);
-// }
+
 .resultsItem {
   cursor: pointer;
   display: flexbox;
@@ -26,6 +23,8 @@
 .resultsItem:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
-span {
-  //   color: #000 !important;
+.results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10rem;
 }
