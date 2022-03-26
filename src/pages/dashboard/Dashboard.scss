@@ -38,6 +38,9 @@
 .header {
   grid-area: header;
   margin: 1rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
 }
 .chart {
   grid-area: chart;
