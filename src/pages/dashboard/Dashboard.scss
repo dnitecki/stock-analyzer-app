@@ -35,48 +35,48 @@
   }
 }
 
-.header {
+.dashboard-header {
   grid-area: header;
   margin: 1rem;
   display: flex;
   align-content: center;
   align-items: center;
 }
-.chart {
+.dashboard-chart {
   grid-area: chart;
   margin: 1rem;
 }
-.overview {
+.dashboard-overview {
   grid-area: overview;
   margin: 1rem;
 }
-.details {
+.dashboard-details {
   grid-area: details;
   margin: 1rem;
 }
 @media only screen and (max-width: 639px) {
-  .header {
+  .dashboard-header {
     grid-area: header;
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 2rem;
     margin-right: 2rem;
   }
-  .chart {
+  .dashboard-chart {
     grid-area: chart;
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 2rem;
     margin-right: 2rem;
   }
-  .overview {
+  .dashboard-overview {
     grid-area: overview;
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 2rem;
     margin-right: 2rem;
   }
-  .details {
+  .dashboard-details {
     grid-area: details;
     margin-top: 1rem;
     margin-bottom: 1rem;

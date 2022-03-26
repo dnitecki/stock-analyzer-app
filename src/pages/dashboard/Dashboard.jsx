@@ -9,16 +9,16 @@ export default function Dashboard() {
   return (
     <div className="body">
       <div className="dashboard">
-        <div className="header">
+        <div className="dashboard-header">
           <Header name={mockCompanyDetails.name} />
         </div>
-        <div className="chart">
+        <div className="dashboard-chart">
           <Card>Chart</Card>
         </div>
-        <div className="overview">
+        <div className="dashboard-overview">
           <Card>Overview</Card>
         </div>
-        <div className="details">
+        <div className="dashboard-details">
           <Details details={mockCompanyDetails} />
         </div>
       </div>
