@@ -11,6 +11,10 @@
   background-color: rgba(255, 255, 255, 0.1);
   margin-top: 0.5rem;
   backdrop-filter: blur(8px);
+  // animation: growDown 300ms ease-in-out;
+  // forwards {
+  //   transform-origin: top center;
+  // }
 }
 
 .resultsItem {
@@ -28,3 +32,14 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 10.1rem;
 }
+// @keyframes growDown {
+//   0% {
+//     transform: scaleY(8);
+//   }
+//   80% {
+//     transform: scaleY(1.1);
+//   }
+//   100% {
+//     transform: scaleY(1);
+//   }
+// }
