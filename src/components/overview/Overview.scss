@@ -1,0 +1,26 @@
+.overview {
+  display: grid;
+  margin: 1rem;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header header"
+    "price change";
+}
+.overview-header {
+  grid-area: header;
+  font-size: 25px;
+}
+.overview-price {
+  grid-area: price;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overview-change {
+  grid-area: change;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -11,13 +11,13 @@ export default function Overview({
 }) {
   return (
     <Card>
-      <span>{symbol}</span>
-      <div>
-        <span>
+      <div className="overview">
+        <span className="overview-header">{symbol}</span>
+        <span className="overview-price">
           ${price}
           <span>{currency}</span>
         </span>
-        <span className={change > 0 ? "green" : "red"}>
+        <span className={`overview-change ${change > 0 ? "green" : "red"}`}>
           {change}
           <span>({changePercent}%)</span>
         </span>

@@ -8,7 +8,7 @@ import Overview from "../../components/overview/Overview";
 
 export default function Dashboard() {
   return (
-    <div className="body">
+    <div>
       <div className="dashboard">
         <div className="dashboard-header">
           <Header name={mockCompanyDetails.name} />

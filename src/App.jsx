@@ -4,7 +4,6 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import Watchlist from "./pages/watchlist/Watchlist";
 import ReportBug from "./pages/reportBug/ReportBug";
 import "primeicons/primeicons.css";
-import "primereact/resources/primereact.min.css";
 
 function App() {
   const location = useLocation();
