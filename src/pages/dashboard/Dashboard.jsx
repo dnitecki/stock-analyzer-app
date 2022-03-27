@@ -1,10 +1,11 @@
 import React from "react";
 import "./Dashboard.scss";
-import Card from "../../components/card/Card";
+
 import Header from "../../components/header/Header";
 import { mockCompanyDetails } from "../../constants/mock";
 import Details from "../../components/details/Details";
 import Overview from "../../components/overview/Overview";
+import Chart from "../../components/chart/Chart";
 
 export default function Dashboard() {
   return (
@@ -14,7 +15,7 @@ export default function Dashboard() {
           <Header name={mockCompanyDetails.name} />
         </div>
         <div className="dashboard-chart">
-          <Card>Chart</Card>
+          <Chart />
         </div>
         <div className="dashboard-overview">
           <Overview
