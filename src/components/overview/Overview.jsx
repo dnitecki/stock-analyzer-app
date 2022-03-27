@@ -14,12 +14,19 @@ export default function Overview({
       <div className="overview">
         <span className="overview-header">{symbol}</span>
         <span className="overview-price">
-          ${price}
-          <span>{currency}</span>
+          <span className="price">${price}</span>
+          <span className="currency">{currency}</span>
         </span>
-        <span className={`overview-change ${change > 0 ? "green" : "red"}`}>
-          {change}
-          <span>({changePercent}%)</span>
+        <span className="overview-change">
+          {change > 0 ? (
+            <i className="pi pi-caret-up" />
+          ) : (
+            <i className="pi pi-caret-down" />
+          )}
+          ${change}
+          <span className={change > 0 ? "green" : "red"}>
+            ({changePercent}%)
+          </span>
         </span>
       </div>
     </Card>

@@ -1,17 +1,17 @@
 ::-ms-input-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
 }
 ::-webkit-input-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
 }
 ::-moz-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
 }
 .searchbar {
   position: relative;
   display: grid;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
   margin-top: 1rem;
   border-radius: 10px;
   width: 20rem;
@@ -24,6 +24,12 @@
   align-items: center;
   grid-template-areas: "input  icon  search";
   grid-template-columns: 5fr 0.5fr 0.5fr;
+}
+.searchbar:hover {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+.searchbar:focus {
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 .input:focus {
   border: none;
