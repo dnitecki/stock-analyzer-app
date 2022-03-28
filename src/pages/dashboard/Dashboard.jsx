@@ -40,7 +40,11 @@ export default function Dashboard() {
     <div>
       <div className="dashboard">
         <div className="dashboard-header">
-          <Header name={stockDetails.name} ticker={stockSymbol} />
+          <Header
+            logo={stockDetails.logo}
+            name={stockDetails.name}
+            ticker={stockSymbol}
+          />
         </div>
         <div className="dashboard-chart">
           <Chart />
