@@ -1,5 +1,6 @@
 .resultsList {
   position: absolute;
+  z-index: 1000;
   border: 2px solid #fff;
   border-radius: 5px;
   list-style: none;
@@ -30,7 +31,7 @@
 .results {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 10.1rem;
+  column-gap: 0.5rem;
 }
 // @keyframes growDown {
 //   0% {
