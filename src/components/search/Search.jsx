@@ -1,19 +1,29 @@
 import React, { useState } from "react";
 import "./Search.scss";
-import { mockSearchResults } from "../../constants/mock";
+// import { mockSearchResults } from "../../constants/mock";
 import SearchResults from "../searchResults/SearchResults";
+import { searchSymbols } from "../../api/stock-api";
 
 export default function Search() {
   const [input, setInput] = useState("");
-  const [bestMatches, setBestMatches] = useState(mockSearchResults.result);
+  const [bestMatches, setBestMatches] = useState([]);
 
   const clear = () => {
     setInput("");
     setBestMatches([]);
   };
 
-  const updateBestMatches = () => {
-    setBestMatches(mockSearchResults.result);
+  const updateBestMatches = async () => {
+    try {
+      if (input) {
+        const searchResults = await searchSymbols(input);
+        const result = searchResults.result;
+        setBestMatches(result);
+      }
+    } catch (error) {
+      setBestMatches([]);
+      console.log(error);
+    }
   };
   return (
     <div>
