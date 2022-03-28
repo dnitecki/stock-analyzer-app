@@ -50,12 +50,12 @@ export default function Chart() {
               <linearGradient id="chartColor" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="5%"
-                  stopColor="rgb(199 210 254)"
+                  stopColor="rgba(255, 255, 255, 0.5)"
                   stopOpacity={0.8}
                 />
                 <stop
                   offset="95%"
-                  stopColor="rgb(199 210 254)"
+                  stopColor="rgba(255, 255, 255, 0.5)"
                   stopOpacity={0}
                 />
               </linearGradient>
@@ -68,7 +68,13 @@ export default function Chart() {
               strokeWidth={0.5}
               fill="url(#chartColor)"
             />
-            <Tooltip />
+            <Tooltip
+              contentStyle={{
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                borderRadius: "5px",
+                border: "2px solid rgba(255, 255, 255, 0.2)",
+              }}
+            />
             <XAxis dataKey={"date"} stroke="#fff" />
             <YAxis domain={["dataMin", "dataMax"]} stroke="#fff" />
           </AreaChart>
