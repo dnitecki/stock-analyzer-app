@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { mockHistoricalData } from "../../constants/mock";
-import {
-  convertDateToUnixTimestamp,
-  convertUnixTimestamptoDate,
-} from "../../helpers/date-helper";
+import { chartConfig } from "../../constants/config";
+import { convertUnixTimestamptoDate } from "../../helpers/date-helper";
 import "./Chart.scss";
 import Card from "../card/Card";
 import {
@@ -14,6 +12,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import ChartFilter from "../chartFilter/ChartFilter";
 
 export default function Chart() {
   const [data, setData] = useState(mockHistoricalData);
@@ -30,8 +29,23 @@ export default function Chart() {
   return (
     <div className="chart-container">
       <Card>
+        <ul className="chart-filters">
+          {Object.keys(chartConfig).map((item) => {
+            return (
+              <li key={item}>
+                <ChartFilter
+                  text={item}
+                  active={filter === item}
+                  onClick={() => {
+                    setFilter(item);
+                  }}
+                />
+              </li>
+            );
+          })}
+        </ul>
         <ResponsiveContainer>
-          <AreaChart data={formatData(data)}>
+          <AreaChart data={formatData(data)} className="chart-style">
             <defs>
               <linearGradient id="chartColor" x1="0" y1="0" x2="0" y2="1">
                 <stop
@@ -55,8 +69,8 @@ export default function Chart() {
               fill="url(#chartColor)"
             />
             <Tooltip />
-            <XAxis dataKey={"date"} />
-            <YAxis domain={["dataMin", "dataMax"]} />
+            <XAxis dataKey={"date"} stroke="#fff" />
+            <YAxis domain={["dataMin", "dataMax"]} stroke="#fff" />
           </AreaChart>
         </ResponsiveContainer>
       </Card>

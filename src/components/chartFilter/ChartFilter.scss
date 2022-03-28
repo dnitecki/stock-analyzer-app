@@ -1,0 +1,15 @@
+.filter-button {
+  cursor: pointer;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  width: 2.2rem;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+.inactive {
+}
