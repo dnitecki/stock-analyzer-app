@@ -48,7 +48,7 @@ export default function Dashboard() {
         <div className="dashboard-overview">
           <Overview
             symbol={stockSymbol}
-            price={quote.pc}
+            price={quote.c}
             change={quote.d}
             changePercent={quote.dp}
             currency={stockDetails.currency}
