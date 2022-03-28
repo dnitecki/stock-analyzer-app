@@ -12,7 +12,10 @@ export default function Dashboard() {
     <div>
       <div className="dashboard">
         <div className="dashboard-header">
-          <Header name={mockCompanyDetails.name} />
+          <Header
+            name={mockCompanyDetails.name}
+            ticker={mockCompanyDetails.ticker}
+          />
         </div>
         <div className="dashboard-chart">
           <Chart />
