@@ -24,7 +24,14 @@ export default function Chart() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState("1W");
   const { stockSymbol } = useContext(StockContext);
-
+  const formatData = (data) => {
+    return data.c.map((item, index) => {
+      return {
+        value: item.toFixed(2),
+        date: convertUnixTimestamptoDate(data.t[index]),
+      };
+    });
+  };
   useEffect(() => {
     const getDateRange = () => {
       const { days, weeks, months, years } = chartConfig[filter];
@@ -54,14 +61,6 @@ export default function Chart() {
     updateChartData();
   }, [stockSymbol, filter]);
 
-  const formatData = (data) => {
-    return data.c.map((item, index) => {
-      return {
-        value: item.toFixed(2),
-        date: convertUnixTimestamptoDate(data.t[index]),
-      };
-    });
-  };
   return (
     <div className="chart-container">
       <Card>
