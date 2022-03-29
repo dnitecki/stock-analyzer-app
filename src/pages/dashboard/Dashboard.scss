@@ -1,9 +1,9 @@
 .dashboard {
   display: grid;
-  // height: 100vh;
-  // width: 100vw;
-  margin: 2rem;
+  height: 100vh;
+  width: 100vw;
   gap: 2rem;
+  padding: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
@@ -13,26 +13,26 @@
     "chart  chart   details"
     "chart  chart   details";
 }
-@media only screen and (max-width: 640px) {
-  .dashboard {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    margin: 1rem;
-    grid-gap: 1rem;
-    grid-template-rows: repeat(8, 1fr);
-    grid-template-columns: 100%;
-    grid-template-areas:
-      "header"
-      "chart"
-      "chart"
-      "chart"
-      "chart"
-      "overview"
-      "details"
-      "details";
-  }
-}
+// @media only screen and (max-width: 640px) {
+//   .dashboard {
+//     display: grid;
+//     height: 100%;
+//     width: 100%;
+//     margin: 1rem;
+//     grid-gap: 1rem;
+//     grid-template-rows: repeat(8, 1fr);
+//     grid-template-columns: 100%;
+//     grid-template-areas:
+//       "header"
+//       "chart"
+//       "chart"
+//       "chart"
+//       "chart"
+//       "overview"
+//       "details"
+//       "details";
+//   }
+// }
 
 .dashboard-header {
   grid-area: header;

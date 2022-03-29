@@ -4,16 +4,14 @@ import Search from "../search/Search";
 
 export default function Header({ logo, name, ticker }) {
   return (
-    <>
-      <div>
-        <h1 className="header-text">
-          <div className="logo-container">
-            <img className="header-logo" src={logo} alt={name} />
-          </div>
-          {name}&nbsp;({ticker})
-        </h1>
-        <Search />
-      </div>
-    </>
+    <div className="header-container">
+      <h1 className="header-text">
+        <div className="logo-container">
+          <img className="header-logo" src={logo} alt={name} />
+        </div>
+        {name}&nbsp;({ticker})
+      </h1>
+      <Search />
+    </div>
   );
 }

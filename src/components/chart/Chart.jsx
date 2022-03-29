@@ -62,65 +62,63 @@ export default function Chart() {
   }, [stockSymbol, filter]);
 
   return (
-    <div className="chart-container">
-      <Card>
-        <ul className="chart-filters">
-          {Object.keys(chartConfig).map((item) => {
-            return (
-              <li key={item}>
-                <ChartFilter
-                  text={item}
-                  active={filter === item}
-                  onClick={() => {
-                    setFilter(item);
-                  }}
-                />
-              </li>
-            );
-          })}
-        </ul>
-        <ResponsiveContainer>
-          <AreaChart
-            data={data}
-            className="chart-style"
-            height="90%"
-            width="90%"
-            margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
-          >
-            <defs>
-              <linearGradient id="chartColor" x1="0" y1="0" x2="0" y2="1">
-                <stop
-                  offset="5%"
-                  stopColor="rgba(255, 255, 255, 0.5)"
-                  stopOpacity={0.8}
-                />
-                <stop
-                  offset="95%"
-                  stopColor="rgba(255, 255, 255, 0.5)"
-                  stopOpacity={0}
-                />
-              </linearGradient>
-            </defs>
-            <Area
-              type="monotone"
-              dataKey="value"
-              stroke="#fff"
-              fillOpacity={1}
-              strokeWidth={0.5}
-              fill="url(#chartColor)"
-            />
-            <Tooltip
-              contentStyle={{
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
-                borderRadius: "5px",
-                border: "2px solid rgba(255, 255, 255, 0.2)",
-              }}
-            />
-            <XAxis dataKey={"date"} stroke="#fff" fontSize={12} />
-            <YAxis domain={["dataMin", "dataMax"]} stroke="#fff" />
-          </AreaChart>
-        </ResponsiveContainer>
-      </Card>
+    <div className="card chart-container">
+      <ul className="chart-filters">
+        {Object.keys(chartConfig).map((item) => {
+          return (
+            <li key={item}>
+              <ChartFilter
+                text={item}
+                active={filter === item}
+                onClick={() => {
+                  setFilter(item);
+                }}
+              />
+            </li>
+          );
+        })}
+      </ul>
+      <ResponsiveContainer>
+        <AreaChart
+          data={data}
+          className="chart-style"
+          height="100%"
+          width="100%"
+          // margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
+        >
+          <defs>
+            <linearGradient id="chartColor" x1="0" y1="0" x2="0" y2="1">
+              <stop
+                offset="5%"
+                stopColor="rgba(255, 255, 255, 0.5)"
+                stopOpacity={0.8}
+              />
+              <stop
+                offset="95%"
+                stopColor="rgba(255, 255, 255, 0.5)"
+                stopOpacity={0}
+              />
+            </linearGradient>
+          </defs>
+          <Area
+            type="monotone"
+            dataKey="value"
+            stroke="#fff"
+            fillOpacity={1}
+            strokeWidth={0.5}
+            fill="url(#chartColor)"
+          />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "5px",
+              border: "2px solid rgba(255, 255, 255, 0.2)",
+            }}
+          />
+          <XAxis dataKey={"date"} stroke="#fff" fontSize={12} />
+          <YAxis domain={["dataMin", "dataMax"]} stroke="#fff" />
+        </AreaChart>
+      </ResponsiveContainer>
     </div>
   );
 }

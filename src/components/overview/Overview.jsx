@@ -10,7 +10,7 @@ export default function Overview({
   currency,
 }) {
   return (
-    <Card>
+    <div className="card">
       <div className="overview">
         <span className="overview-header">{symbol}</span>
         <span className="overview-price">
@@ -29,6 +29,6 @@ export default function Overview({
           </span>
         </span>
       </div>
-    </Card>
+    </div>
   );
 }
