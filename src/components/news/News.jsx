@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
+import StockContext from "../context/StockContext";
 import "./News.scss";
-
-export default function News() {
-  return <div className="card">News</div>;
+import { fetchStockNews } from "../../api/stock-api";
+export default function News(category, headline) {
+  return (
+    <div className="card">
+      <div>{/* {category}?{headline}? */}</div>
+    </div>
+  );
 }

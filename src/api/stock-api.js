@@ -1,4 +1,7 @@
 const basePath = "https://finnhub.io/api/v1";
+const date = new Date();
+let newsFrom = date.getDate() - 7;
+let newsTo = date.getDate();
 
 export const searchSymbols = async (query) => {
   const url = `${basePath}/search?q=${query}&token=${process.env.REACT_APP_API_KEY}`;
@@ -46,4 +49,12 @@ export const fetchHistoricalData = async (
   }
 
   return await response.json();
+};
+export const fetchStockNews = async (stockSymbol) => {
+  const url = `${basePath}/company-news?symbol=${stockSymbol}&from=${newsFrom}&to=${newsTo}&token=${process.env.REACT_APP_API_KEY} `;
+  const response = await fetch(url);
+  if (!response.ok) {
+    const message = `An error has occured: ${response.status}`;
+    throw new Error(message);
+  }
 };
