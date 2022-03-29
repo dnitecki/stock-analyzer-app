@@ -5,6 +5,7 @@ import Header from "../../components/header/Header";
 import Details from "../../components/details/Details";
 import Overview from "../../components/overview/Overview";
 import Chart from "../../components/chart/Chart";
+import News from "../../components/news/News";
 import StockContext from "../../components/context/StockContext";
 import { fetchQuote, fetchStockDetails } from "../../api/stock-api";
 
@@ -61,7 +62,9 @@ export default function Dashboard() {
         <div className="dashboard-details">
           <Details details={stockDetails} />
         </div>
-        <div className="dashboard-news"></div>
+        <div className="dashboard-news">
+          <News />
+        </div>
       </div>
     </div>
   );

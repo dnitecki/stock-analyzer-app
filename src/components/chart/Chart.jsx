@@ -79,7 +79,13 @@ export default function Chart() {
         })}
       </ul>
       <ResponsiveContainer>
-        <AreaChart data={data} className="chart-style">
+        <AreaChart
+          data={data}
+          width="100%"
+          height="100%"
+          className="chart-style"
+          margin={{ top: 40, bottom: 0, left: -20, right: 0 }}
+        >
           <defs>
             <linearGradient id="chartColor" x1="0" y1="0" x2="0" y2="1">
               <stop
@@ -110,7 +116,7 @@ export default function Chart() {
             }}
           />
           <XAxis dataKey={"date"} stroke="#fff" fontSize={12} />
-          <YAxis domain={["dataMin", "dataMax"]} stroke="#fff" />
+          <YAxis domain={["dataMin", "dataMax"]} stroke="#fff" fontSize={12} />
         </AreaChart>
       </ResponsiveContainer>
     </div>

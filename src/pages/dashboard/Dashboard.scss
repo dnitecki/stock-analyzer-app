@@ -2,7 +2,7 @@
   display: grid;
   height: 100vh;
   width: 100vw;
-  gap: 2rem;
+  grid-gap: 2rem;
   padding: 2rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(5, 1fr);
@@ -13,29 +13,32 @@
     "chart  chart   details  news"
     "chart  chart   details  news";
 }
-// @media only screen and (max-width: 640px) {
-//   .dashboard {
-//     display: grid;
-//     height: 100%;
-//     width: 100%;
-//     margin: 1rem;
-//     grid-gap: 1rem;
-//     grid-template-rows: repeat(8, 1fr);
-//     grid-template-columns: 100%;
-//     grid-template-areas:
-//       "header"
-//       "chart"
-//       "chart"
-//       "chart"
-//       "chart"
-//       "overview"
-//       "details"
-//       "details";
-//   }
-// }
+@media only screen and (max-width: 640px) {
+  .dashboard {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0;
+    padding-bottom: 1rem;
+    grid-template-rows: 0.7fr 0.7fr 1.5fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "overview"
+      "chart"
+      "details"
+      "details"
+      "news"
+      "news";
+  }
+}
 
 .dashboard-header {
   grid-area: header;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 .dashboard-chart {
   grid-area: chart;
@@ -49,17 +52,3 @@
 .dashboard-news {
   grid-area: news;
 }
-// @media only screen and (max-width: 639px) {
-//   .dashboard-header {
-//     grid-area: header;
-//   }
-//   .dashboard-chart {
-//     grid-area: chart;
-//   }
-//   .dashboard-overview {
-//     grid-area: overview;
-//   }
-//   .dashboard-details {
-//     grid-area: details;
-//   }
-// }
