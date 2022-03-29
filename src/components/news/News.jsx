@@ -2,10 +2,10 @@ import React, { useContext, useState, useEffect } from "react";
 import StockContext from "../context/StockContext";
 import "./News.scss";
 import { fetchStockNews } from "../../api/stock-api";
-export default function News(category, headline) {
+export default function News(news) {
   return (
     <div className="card">
-      <div>{/* {category}?{headline}? */}</div>
+      <div></div>
     </div>
   );
 }

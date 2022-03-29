@@ -17,7 +17,7 @@ export default function Dashboard() {
   const { stockSymbol } = useContext(StockContext);
   const [stockDetails, setStockDetails] = useState({});
   const [quote, setQuote] = useState({});
-  const [news, setNews] = useState([]);
+  const [news, setNews] = useState({});
 
   useEffect(() => {
     const updateStockDetails = async () => {
@@ -78,7 +78,7 @@ export default function Dashboard() {
           <Details details={stockDetails} />
         </div>
         <div className="dashboard-news">
-          <News category={news?.category} headline={news?.headline} />
+          <News news={news} />
         </div>
       </div>
     </div>
