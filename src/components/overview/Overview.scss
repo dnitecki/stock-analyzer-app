@@ -16,15 +16,15 @@
   grid-area: price;
   display: flex;
   column-gap: 0.5rem;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: baseline;
 }
 .overview-change {
   grid-area: change;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: baseline;
-  font-size: 30px;
+  font-size: 25px;
   column-gap: 0.5rem;
 }
 .green {
@@ -34,7 +34,7 @@
   color: red;
 }
 .price {
-  font-size: 35px;
+  font-size: 25px;
 }
 .currency {
   font-size: 18px;

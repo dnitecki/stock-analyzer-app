@@ -14,7 +14,7 @@ export default function Overview({
       <div className="overview">
         <span className="overview-header">{symbol}</span>
         <span className="overview-price">
-          <span className="price">${price}</span>
+          <span className="price">${price.toFixed(2)}</span>
           <span className="currency">{currency}</span>
         </span>
         <span className="overview-change">
@@ -23,9 +23,9 @@ export default function Overview({
           ) : (
             <i className="pi pi-caret-down" />
           )}
-          ${change}
+          ${change.toFixed(2)}
           <span className={change > 0 ? "green" : "red"}>
-            ({changePercent}%)
+            ({changePercent.toFixed(2)}%)
           </span>
         </span>
       </div>
