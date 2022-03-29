@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Watchlist from "./pages/watchlist/Watchlist";
 import ReportBug from "./pages/reportBug/ReportBug";
-import "primereact/resources/themes/lara-dark-teal/theme.css"; //theme
+import "primereact/resources/themes/lara-dark-blue/theme.css"; //theme
 import "primereact/resources/primereact.min.css"; //core css
 import "primeicons/primeicons.css"; //icons
 import { useState } from "react";

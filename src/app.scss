@@ -65,6 +65,15 @@ ul::-webkit-scrollbar-thumb {
   flex-direction: column !important;
   background: transparent !important;
 }
+// .p-tabview .p-tabview-nav .li.p-highlight .p-tabview-nav-link {
+//   background: #fff !important;
+//   border-color: aqua !important;
+//   color: aqua !important;
+// }
+// .p-tabview .p-tabview-nav {
+//   border: 1px solid #fff !important;
+//   border-width: 0 0 2px 0 !important;
+// }
 .p-tabview-panels {
   display: block !important;
   background: transparent !important;
@@ -73,9 +82,13 @@ ul::-webkit-scrollbar-thumb {
   height: 100%;
   background: transparent !important;
 }
-.p-tabview-nav {
-  // border: 2px solid #fff !important;
-}
+// .p-tabview-nav-link {
+//   border-color: aqua;
+//   color: aqua;
+// }
+// .p-tabview-selected {
+//   border-bottom: 2px solid blue !important;
+// }
 .p-tabview .p-tabview-nav li .p-tabview-nav-link {
   background: transparent !important;
   font-weight: 400 !important;
