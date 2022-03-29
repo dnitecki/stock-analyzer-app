@@ -1,6 +1,5 @@
 import React from "react";
 import "./Overview.scss";
-import Card from "../card/Card.jsx";
 
 export default function Overview({
   symbol,
@@ -14,7 +13,7 @@ export default function Overview({
       <div className="overview">
         <span className="overview-header">{symbol}</span>
         <span className="overview-price">
-          <span className="price">${price.toFixed(2)}</span>
+          <span className="price">${price?.toFixed(2)}</span>
           <span className="currency">{currency}</span>
         </span>
         <span className="overview-change">
@@ -24,9 +23,9 @@ export default function Overview({
             <i className="pi pi-caret-down red" />
           )}
           <span className={change > 0 ? "green" : "red"}>
-            ${change.toFixed(2)}
+            ${change?.toFixed(2)}
           </span>
-          <span>({changePercent.toFixed(2)}%)</span>
+          <span>({changePercent?.toFixed(2)}%)</span>
         </span>
       </div>
     </div>

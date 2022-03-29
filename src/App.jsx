@@ -9,7 +9,7 @@ import StockContext from "./components/context/StockContext";
 
 function App() {
   const location = useLocation();
-  const [stockSymbol, setStockSymbol] = useState("FB");
+  const [stockSymbol, setStockSymbol] = useState("INTC");
   return (
     <div className="app">
       <div>

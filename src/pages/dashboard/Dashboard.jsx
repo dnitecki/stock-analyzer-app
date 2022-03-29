@@ -61,6 +61,7 @@ export default function Dashboard() {
         <div className="dashboard-details">
           <Details details={stockDetails} />
         </div>
+        <div className="dashboard-news"></div>
       </div>
     </div>
   );

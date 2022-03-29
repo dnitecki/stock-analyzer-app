@@ -4,14 +4,14 @@
   width: 100vw;
   gap: 2rem;
   padding: 2rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
-    "header header  header"
-    "chart  chart   overview"
-    "chart  chart   details"
-    "chart  chart   details"
-    "chart  chart   details";
+    "header header  header  header"
+    "chart  chart   overview  news"
+    "chart  chart   details  news"
+    "chart  chart   details  news"
+    "chart  chart   details  news";
 }
 // @media only screen and (max-width: 640px) {
 //   .dashboard {
@@ -45,6 +45,9 @@
 }
 .dashboard-details {
   grid-area: details;
+}
+.dashboard-news {
+  grid-area: news;
 }
 // @media only screen and (max-width: 639px) {
 //   .dashboard-header {
