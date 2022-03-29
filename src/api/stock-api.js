@@ -1,8 +1,13 @@
 const basePath = "https://finnhub.io/api/v1";
-const date = new Date();
-let newsFrom = date.getDate() - 7;
-let newsTo = date.getDate();
 
+//Date Handeling
+const date = new Date().toISOString().split("T")[0];
+let fromDate = new Date(date);
+fromDate.setDate(fromDate.getDate() - 5);
+let newsFrom = new Date(fromDate).toISOString().split("T")[0];
+let newsTo = date;
+
+//API Calls
 export const searchSymbols = async (query) => {
   const url = `${basePath}/search?q=${query}&token=${process.env.REACT_APP_API_KEY}`;
   const response = await fetch(url);
