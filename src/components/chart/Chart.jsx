@@ -62,7 +62,7 @@ export default function Chart() {
   }, [stockSymbol, filter]);
 
   return (
-    <div className="card chart-container">
+    <div className="card">
       <ul className="chart-filters">
         {Object.keys(chartConfig).map((item) => {
           return (
@@ -79,13 +79,7 @@ export default function Chart() {
         })}
       </ul>
       <ResponsiveContainer>
-        <AreaChart
-          data={data}
-          className="chart-style"
-          // height="100%"
-          // width="100%"
-          // margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
-        >
+        <AreaChart data={data} className="chart-style">
           <defs>
             <linearGradient id="chartColor" x1="0" y1="0" x2="0" y2="1">
               <stop
