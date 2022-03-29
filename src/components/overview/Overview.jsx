@@ -19,14 +19,14 @@ export default function Overview({
         </span>
         <span className="overview-change">
           {change > 0 ? (
-            <i className="pi pi-caret-up" />
+            <i className="pi pi-caret-up green" />
           ) : (
-            <i className="pi pi-caret-down" />
+            <i className="pi pi-caret-down red" />
           )}
-          ${change.toFixed(2)}
           <span className={change > 0 ? "green" : "red"}>
-            ({changePercent.toFixed(2)}%)
+            ${change.toFixed(2)}
           </span>
+          <span>({changePercent.toFixed(2)}%)</span>
         </span>
       </div>
     </div>
