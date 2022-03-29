@@ -1,5 +1,6 @@
 import React from "react";
 import "./Details.scss";
+import { TabView, TabPanel } from "primereact/tabview";
 
 export default function Details({ details }) {
   const detailsList = {
@@ -16,22 +17,27 @@ export default function Details({ details }) {
   };
   return (
     <div className="card">
-      <ul className="detailsList">
-        {Object.keys(detailsList).map((item) => {
-          return (
-            <li className="detailsItem" key={item}>
-              <div className="details">
-                <span>{detailsList[item]}</span>
-                <span>
-                  {item === "marketCapitalization"
-                    ? `${convertMillionToBillion(details[item])}B`
-                    : details[item]}
-                </span>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+      <TabView>
+        <TabPanel header="Details">
+          <ul className="detailsList">
+            {Object.keys(detailsList).map((item) => {
+              return (
+                <li className="detailsItem" key={item}>
+                  <div className="details">
+                    <span>{detailsList[item]}</span>
+                    <span>
+                      {item === "marketCapitalization"
+                        ? `${convertMillionToBillion(details[item])}B`
+                        : details[item]}
+                    </span>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </TabPanel>
+        <TabPanel header="Header 2"></TabPanel>
+      </TabView>
     </div>
   );
 }

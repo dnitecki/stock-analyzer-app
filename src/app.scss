@@ -59,7 +59,32 @@ ul::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.2); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
 }
-
+// tabview
+.p-tabview {
+  display: flex !important;
+  flex-direction: column !important;
+  background: transparent !important;
+}
+.p-tabview-panels {
+  display: block !important;
+  background: transparent !important;
+}
+.p-tabview-panel {
+  height: 100%;
+  background: transparent !important;
+}
+.p-tabview-nav {
+  // border: 2px solid #fff !important;
+}
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  background: transparent !important;
+  font-weight: 400 !important;
+}
+.p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: none !important;
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
