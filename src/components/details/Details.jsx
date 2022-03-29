@@ -36,7 +36,9 @@ export default function Details({ details }) {
             })}
           </ul>
         </TabPanel>
-        <TabPanel header="Header 2"></TabPanel>
+        <TabPanel header="Header"></TabPanel>
+        <TabPanel header="Header"></TabPanel>
+        <TabPanel header="Header"></TabPanel>
       </TabView>
     </div>
   );
