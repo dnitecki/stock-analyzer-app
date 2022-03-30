@@ -5,7 +5,14 @@ export default function News({ news }) {
     <div className="card">
       {news.map((item) => (
         <div className="card-news" key={item}>
-          {item.headline}
+          <div className="news-content">
+            <div className="news-headline">{item.headline}</div>
+            <img
+              className="news-image"
+              src={item.image}
+              alt={item.source}
+            ></img>
+          </div>
         </div>
       ))}
     </div>

@@ -2,9 +2,26 @@
   position: relative;
   border-radius: 5px;
   padding: 1rem;
+  margin-bottom: 1rem;
   border: 2px solid rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.05);
 }
 .card-news:hover {
   border: 2px solid rgba(255, 255, 255, 0.4);
+}
+.news-content {
+  display: grid;
+  grid-template-areas: "image  headline";
+  grid-template-columns: 1fr 2fr;
+  column-gap: 0.5rem;
+}
+.news-headline {
+  grid-area: headline;
+}
+.news-image {
+  grid-area: image;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 5px;
+  object-fit: cover;
 }
