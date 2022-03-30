@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React from "react";
 import "./News.scss";
 export default function News({ news }) {
   return (
@@ -6,12 +6,13 @@ export default function News({ news }) {
       {news.map((item) => (
         <div className="card-news" key={item}>
           <div className="news-content">
-            <div className="news-headline">{item.headline}</div>
+            <div className="news-headline">{item?.headline}</div>
             <img
               className="news-image"
               src={item.image}
               alt={item.source}
             ></img>
+            <div className="link"></div>
           </div>
         </div>
       ))}
