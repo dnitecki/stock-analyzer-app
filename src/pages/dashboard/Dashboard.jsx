@@ -24,6 +24,7 @@ export default function Dashboard() {
       try {
         const result = await fetchStockDetails(stockSymbol);
         setStockDetails(result);
+        console.log(result);
       } catch (error) {
         setStockDetails({});
         console.log(error);
@@ -42,13 +43,13 @@ export default function Dashboard() {
       try {
         const result = await fetchStockNews(stockSymbol);
         setNews(result);
+        console.log(news); ///not setting result of fetch...Returning as undefined
       } catch (error) {
         setNews({});
         console.log(error);
       }
     };
     updateStockNews();
-
     updateStockDetails();
     updateStockOverview();
   }, [stockSymbol]);

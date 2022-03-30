@@ -1,0 +1,10 @@
+.card-news {
+  position: relative;
+  border-radius: 5px;
+  padding: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.card-news:hover {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
