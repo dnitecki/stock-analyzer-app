@@ -43,7 +43,7 @@ export default function Dashboard() {
       try {
         const result = await fetchStockNews(stockSymbol);
         setNews(result);
-        console.log(news); ///not setting result of fetch...Returning as undefined
+        console.log(result); ///not setting result of fetch...Returning as undefined
       } catch (error) {
         setNews({});
         console.log(error);
