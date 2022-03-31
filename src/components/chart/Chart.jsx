@@ -84,7 +84,7 @@ export default function Chart() {
           width="100%"
           height="100%"
           className="chart-style"
-          margin={{ top: 40, bottom: 0, left: -20, right: 0 }}
+          margin={{ top: 40, bottom: 0, left: -10, right: 0 }}
         >
           <defs>
             <linearGradient id="chartColor" x1="0" y1="0" x2="0" y2="1">

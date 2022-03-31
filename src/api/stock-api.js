@@ -3,7 +3,7 @@ const basePath = "https://finnhub.io/api/v1";
 //Date Handeling
 const date = new Date().toISOString().split("T")[0];
 let fromDate = new Date(date);
-fromDate.setDate(fromDate.getDate() - 5);
+fromDate.setDate(fromDate.getDate() - 3);
 let newsFrom = new Date(fromDate).toISOString().split("T")[0];
 let newsTo = date;
 

@@ -15,7 +15,7 @@
     "image  headline"
     "image  link";
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
   column-gap: 1rem;
 }
 .news-headline {
@@ -24,8 +24,8 @@
 }
 .news-image {
   grid-area: image;
-  height: 10rem;
-  width: 10rem;
+  height: 8rem;
+  width: 8rem;
   border-radius: 5px;
   object-fit: cover;
 }
