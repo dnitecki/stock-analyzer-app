@@ -72,8 +72,8 @@ export default function Dashboard() {
     updateStockNews();
     updateStockDetails();
     updateStockOverview();
-    getSP500();
-    updateStockFundamentals();
+    // getSP500();  //Removed to not use requests
+    // updateStockFundamentals(); //Removed to not use requestsaapl4aapcic
   }, [stockSymbol]);
   return (
     <div>
