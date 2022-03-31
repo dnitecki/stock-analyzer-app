@@ -12,6 +12,7 @@ import {
   fetchStockDetails,
   fetchStockNews,
   fetchSP500,
+  fetchStockFundamentals,
 } from "../../api/stock-api";
 
 export default function Dashboard() {
@@ -20,6 +21,7 @@ export default function Dashboard() {
   const [quote, setQuote] = useState({});
   const [news, setNews] = useState([]);
   const [sp500, setSp500] = useState({});
+  const [fundamentals, setFundamentals] = useState({});
 
   useEffect(() => {
     const updateStockDetails = async () => {
@@ -45,7 +47,7 @@ export default function Dashboard() {
         const result = await fetchStockNews(stockSymbol);
         setNews(result);
       } catch (error) {
-        setNews({});
+        setNews([]);
         console.log(error);
       }
     };
@@ -58,10 +60,20 @@ export default function Dashboard() {
         console.log(error);
       }
     };
+    const updateStockFundamentals = async () => {
+      try {
+        const result = await fetchStockFundamentals(stockSymbol);
+        setFundamentals(result);
+      } catch (error) {
+        setFundamentals({});
+        console.log(error);
+      }
+    };
     updateStockNews();
     updateStockDetails();
     updateStockOverview();
     getSP500();
+    updateStockFundamentals();
   }, [stockSymbol]);
   return (
     <div>

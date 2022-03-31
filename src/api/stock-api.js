@@ -69,7 +69,16 @@ export const fetchStockNews = async (stockSymbol) => {
   return await response.json();
 };
 export const fetchSP500 = async () => {
-  const url = `${basePathAV}?function=GLOBAL_QUOTE&symbol=^GSPC&apikey=${process.env.REACT_APP_AV_API_KEY} `;
+  const url = `${basePathAV}?function=GLOBAL_QUOTE&symbol=VOO&apikey=${process.env.REACT_APP_AV_API_KEY} `;
+  const response = await fetch(url);
+  if (!response.ok) {
+    const message = `An error has occured: ${response.status}`;
+    throw new Error(message);
+  }
+  return await response.json();
+};
+export const fetchStockFundamentals = async (stockSymbol) => {
+  const url = `${basePathAV}?function=OVERVIEW&symbol=${stockSymbol}&apikey=${process.env.REACT_APP_AV_API_KEY} `;
   const response = await fetch(url);
   if (!response.ok) {
     const message = `An error has occured: ${response.status}`;
