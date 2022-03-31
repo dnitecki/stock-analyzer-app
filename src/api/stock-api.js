@@ -1,4 +1,5 @@
 const basePath = "https://finnhub.io/api/v1";
+const basePathAV = "https://www.alphavantage.co/query";
 
 //Date Handeling
 const date = new Date().toISOString().split("T")[0];
@@ -60,6 +61,15 @@ export const fetchHistoricalData = async (
 };
 export const fetchStockNews = async (stockSymbol) => {
   const url = `${basePath}/company-news?symbol=${stockSymbol}&from=${newsFrom}&to=${newsTo}&token=${process.env.REACT_APP_API_KEY} `;
+  const response = await fetch(url);
+  if (!response.ok) {
+    const message = `An error has occured: ${response.status}`;
+    throw new Error(message);
+  }
+  return await response.json();
+};
+export const fetchSP500 = async () => {
+  const url = `${basePathAV}?function=GLOBAL_QUOTE&symbol=^GSPC&apikey=${process.env.REACT_APP_API_KEY_AV} `;
   const response = await fetch(url);
   if (!response.ok) {
     const message = `An error has occured: ${response.status}`;
