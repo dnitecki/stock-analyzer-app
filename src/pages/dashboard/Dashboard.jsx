@@ -123,7 +123,6 @@ export default function Dashboard() {
           />
         </div>
         <div className="dashboard-details">
-          {/* <Details details={stockDetails} /> */}
           <StatsCard details={stockDetails} stats={detailedQuote} />
         </div>
         <div className="dashboard-news">

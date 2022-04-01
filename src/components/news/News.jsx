@@ -3,8 +3,7 @@ import "./News.scss";
 export default function News({ news }) {
   return (
     <div className="card">
-      {/* <div>News</div> */}
-      <div className="container">
+      <div className="news-card">
         {news.map((item) => (
           <div className="card-news" key={item}>
             <div className="news-content">

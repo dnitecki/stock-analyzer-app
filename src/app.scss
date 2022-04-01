@@ -14,14 +14,15 @@ html {
     rgba(83, 120, 149, 1) 100%
   );
 }
-//card
+//cards
 .card {
   position: relative;
   border-radius: 5px;
+  height: 100%;
   padding: 1rem;
   border: 2px solid rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.05);
-  overflow: auto;
+  overflow: hidden;
 }
 .card:hover {
   border: 2px solid rgba(255, 255, 255, 0.4);
@@ -31,7 +32,14 @@ html {
     padding: 0.5rem;
   }
 }
-
+.panel-card {
+  height: 100%;
+  overflow: auto;
+}
+.news-card {
+  height: 100%;
+  overflow: auto;
+}
 // scrollbar
 
 body::-webkit-scrollbar {
@@ -112,24 +120,3 @@ ul::-webkit-scrollbar-thumb {
   outline-offset: 0;
   box-shadow: none !important;
 }
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-// background: linear-gradient(
-//   135deg,
-//   rgba(9, 32, 63, 1) 0%,
-//   rgba(83, 120, 149, 1) 100%
-// );
-// padding: 2rem;
-// width: 100vh;
-// height: 100vh;
-// background-size: 100% 100%;
-// overflow: overlay;
