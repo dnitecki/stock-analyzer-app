@@ -88,7 +88,16 @@ export const fetchStockFundamentals = async (stockSymbol) => {
   return await response.json();
 };
 export const fetchStockFinancials = async (stockSymbol) => {
-  const url = `${basePathIEX}/stock/${stockSymbol}/stats/d?token=${process.env.REACT_APP_IEX_API_KEY} `;
+  const url = `${basePathIEX}/stock/${stockSymbol}/stats/?token=${process.env.REACT_APP_IEX_API_KEY} `;
+  const response = await fetch(url);
+  if (!response.ok) {
+    const message = `An error has occured: ${response.status}`;
+    throw new Error(message);
+  }
+  return await response.json();
+};
+export const fetchDetailedStockQuote = async (stockSymbol) => {
+  const url = `${basePathIEX}/stock/${stockSymbol}/quote/?token=${process.env.REACT_APP_IEX_API_KEY} `;
   const response = await fetch(url);
   if (!response.ok) {
     const message = `An error has occured: ${response.status}`;

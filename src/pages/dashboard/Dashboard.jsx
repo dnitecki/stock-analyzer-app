@@ -14,7 +14,9 @@ import {
   fetchSP500,
   fetchStockFundamentals,
   fetchStockFinancials,
+  fetchDetailedStockQuote,
 } from "../../api/stock-api";
+import StatsCard from "../../components/statsCard/StatsCard";
 
 export default function Dashboard() {
   const { stockSymbol } = useContext(StockContext);
@@ -24,6 +26,7 @@ export default function Dashboard() {
   const [sp500, setSp500] = useState({});
   const [fundamentals, setFundamentals] = useState({});
   const [financials, setFinancials] = useState({});
+  const [detailedQuote, setDetailedQuote] = useState({});
 
   useEffect(() => {
     const updateStockDetails = async () => {
@@ -80,9 +83,19 @@ export default function Dashboard() {
         console.log(error);
       }
     };
+    const updateDetailedStockQuote = async () => {
+      try {
+        const result = await fetchDetailedStockQuote(stockSymbol);
+        setDetailedQuote(result);
+      } catch (error) {
+        setDetailedQuote({});
+        console.log(error);
+      }
+    };
     updateStockNews();
     updateStockDetails();
     updateStockOverview();
+    updateDetailedStockQuote();
     // updateStockFinancials(); //Removed to not use requests
     // getSP500();  //Removed to not use requests
     // updateStockFundamentals(); //Removed to not use requests
@@ -110,7 +123,8 @@ export default function Dashboard() {
           />
         </div>
         <div className="dashboard-details">
-          <Details details={stockDetails} />
+          {/* <Details details={stockDetails} /> */}
+          <StatsCard details={stockDetails} stats={detailedQuote} />
         </div>
         <div className="dashboard-news">
           <News news={news} />
