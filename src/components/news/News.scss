@@ -35,3 +35,9 @@
   padding-bottom: 0.75rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
+.img {
+  background-image: url("../../../public/assets/imageNotFound.png");
+  background-position: center;
+  background-size: cover;
+  display: block;
+}

@@ -9,11 +9,15 @@ export default function News({ news, name }) {
           <div className="card-news" key={item}>
             <div className="news-content">
               <div className="news-headline">{item?.headline}</div>
+              {/* <object className="news-image" data={item.image} type="image"> */}
               <img
-                className="news-image"
+                className="news-image img"
+                title={item.headline}
                 src={item.image}
-                alt={item.source}
+                alt=""
               ></img>
+              {/* </object> */}
+
               <div className="link"></div>
             </div>
           </div>
