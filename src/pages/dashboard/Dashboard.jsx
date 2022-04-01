@@ -126,7 +126,7 @@ export default function Dashboard() {
           <StatsCard details={stockDetails} stats={detailedQuote} />
         </div>
         <div className="dashboard-news">
-          <News news={news} />
+          <News news={news} name={stockDetails.name} />
         </div>
       </div>
     </div>

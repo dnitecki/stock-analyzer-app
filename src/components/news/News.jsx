@@ -1,8 +1,9 @@
 import React from "react";
 import "./News.scss";
-export default function News({ news }) {
+export default function News({ news, name }) {
   return (
     <div className="card">
+      <div className="news-header">News related to {name}</div>
       <div className="news-card">
         {news.map((item) => (
           <div className="card-news" key={item}>
