@@ -121,3 +121,24 @@ ul::-webkit-scrollbar-thumb {
   outline-offset: 0;
   box-shadow: none !important;
 }
+// progress spinner
+
+.progress-spinner {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid rgba(255, 255, 255, 0.5);
+  border-right: 3px solid transparent;
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

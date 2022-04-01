@@ -7,7 +7,17 @@
 ::-moz-placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
+.searchbar-container {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  column-gap: 0.7rem;
+}
 .searchbar {
+  grid-area: searchbar;
   display: grid;
   border: 2px solid rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.05);
@@ -29,6 +39,15 @@
 }
 .searchbar:focus {
   border: 2px solid rgba(255, 255, 255, 0.4);
+}
+.spinner {
+  display: flex;
+  align-content: flex-end;
+  justify-content: center;
+  height: 2em;
+  width: auto;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 .input:focus {
   border: none;
