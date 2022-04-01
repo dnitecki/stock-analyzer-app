@@ -5,17 +5,13 @@
   border-radius: 5px;
   list-style: none;
   overflow-y: auto;
-  max-height: 10rem;
+  max-height: 15rem;
   padding: 0;
   width: 21rem;
   border: 2px solid rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.1);
   margin-top: 0.5rem;
   backdrop-filter: blur(8px);
-  // animation: growDown 300ms ease-in-out;
-  // forwards {
-  //   transform-origin: top center;
-  // }
 }
 
 .resultsItem {
@@ -33,14 +29,3 @@
   grid-template-columns: 0.5fr 2.5fr;
   column-gap: 0.5rem;
 }
-// @keyframes growDown {
-//   0% {
-//     transform: scaleY(8);
-//   }
-//   80% {
-//     transform: scaleY(1.1);
-//   }
-//   100% {
-//     transform: scaleY(1);
-//   }
-// }
