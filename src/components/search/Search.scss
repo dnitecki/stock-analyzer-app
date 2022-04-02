@@ -72,7 +72,8 @@ button {
   justify-content: flex-end;
 }
 .clear-icon {
-  font-size: 20px;
+  height: 1.2rem;
+  filter: invert(1);
 }
 .search {
   grid-area: search;
@@ -89,5 +90,6 @@ button {
   background-color: rgba(255, 255, 255, 0.3);
 }
 .search-icon {
-  font-size: 20px;
+  height: 1.2rem;
+  filter: invert(1);
 }

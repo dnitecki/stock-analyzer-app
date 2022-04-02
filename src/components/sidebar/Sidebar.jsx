@@ -3,7 +3,7 @@ import "./Sidebar.scss";
 import { Link } from "react-router-dom";
 
 class Sidebar extends Component {
-  state = { clicked: false };
+  state = { clicked: true };
 
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
@@ -12,7 +12,7 @@ class Sidebar extends Component {
     return (
       <div>
         <header className="header" id="header">
-          <div className="header__toggle" onClick={this.handleClick}>
+          {/* <div className="header__toggle" onClick={this.handleClick}>
             <div>
               <img
                 className={this.state.clicked ? "move" : "back"}
@@ -25,7 +25,7 @@ class Sidebar extends Component {
                 alt="icon"
               ></img>
             </div>
-          </div>
+          </div> */}
         </header>
         <div id="nav-bar" className={this.state.clicked ? "show" : "navbar"}>
           <nav className="nav">

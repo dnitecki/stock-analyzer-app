@@ -41,13 +41,12 @@ a {
   justify-content: center;
 }
 .navbar {
-  position: absolute;
+  position: relative;
   top: 0;
   left: -30%;
   width: calc(var(--nav-width));
   height: 100vh;
   backdrop-filter: blur(5px);
-  // background: transparent;
   background: rgba(255, 255, 255, 0.1);
   padding: 0.5rem 1rem 0 0;
   transition: 0.3s;
@@ -55,13 +54,14 @@ a {
   overflow: hidden;
 }
 .show {
-  position: absolute;
+  //   position: fixed;
   top: 0;
+  display: flex;
   left: 0;
-  width: calc(var(--nav-width));
+  width: 68px;
+  //   width: calc(var(--nav-width));
   height: 100vh;
   backdrop-filter: blur(5px);
-  // background: transparent;
   background: rgba(255, 255, 255, 0.1);
   padding: 0.5rem 1rem 0 0;
   transition: 0.3s;

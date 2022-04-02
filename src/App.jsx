@@ -8,6 +8,7 @@ import "primereact/resources/primereact.min.css"; //core css
 import "primeicons/primeicons.css"; //icons
 import { useState } from "react";
 import StockContext from "./components/context/StockContext";
+import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   const location = useLocation();
@@ -16,11 +17,16 @@ function App() {
     <div className="app">
       <div>
         <StockContext.Provider value={{ stockSymbol, setStockSymbol }}>
-          <Routes location={location} key={location.pathname}>
-            <Route exact path="/" element={<Dashboard />} />
-            <Route exact path="/watchlist" element={<Watchlist />} />
-            <Route exact path="/reportbug" element={<ReportBug />} />
-          </Routes>
+          <div className="app-container">
+            <Sidebar />
+            <div className="app-content">
+              <Routes location={location} key={location.pathname}>
+                <Route exact path="/" element={<Dashboard />} />
+                <Route exact path="/watchlist" element={<Watchlist />} />
+                <Route exact path="/reportbug" element={<ReportBug />} />
+              </Routes>
+            </div>
+          </div>
         </StockContext.Provider>
       </div>
     </div>

@@ -50,13 +50,22 @@ export default function Search() {
           <div className="icon">
             {input && (
               <button>
-                <i className="pi pi-times clear-icon" onClick={clear} />
+                <img
+                  src="./assets/interface-delete-1.svg"
+                  alt=""
+                  className="clear-icon"
+                  onClick={clear}
+                />
               </button>
             )}
           </div>
           <div className="search">
             <button onClick={updateBestMatches}>
-              <i className="pi pi-search search-icon" />
+              <img
+                src="./assets/interface-search.svg"
+                alt=""
+                className="search-icon"
+              />
             </button>
           </div>
         </span>
