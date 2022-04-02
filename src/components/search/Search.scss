@@ -33,7 +33,6 @@
   grid-template-areas: "input  icon  search";
   grid-template-columns: 5fr 0.5fr 0.5fr;
   column-gap: 0.5rem;
-  margin-bottom: 1rem;
 }
 .searchbar:focus {
   border: 2px solid rgba(255, 255, 255, 0.4);
@@ -44,7 +43,6 @@
   justify-content: center;
   height: 2em;
   width: auto;
-  margin-bottom: 1rem;
   text-align: center;
 }
 .input:focus {
