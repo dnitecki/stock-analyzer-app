@@ -11,9 +11,6 @@ import {
   fetchQuote,
   fetchStockDetails,
   fetchStockNews,
-  fetchSP500,
-  fetchStockFundamentals,
-  fetchStockFinancials,
   fetchDetailedStockQuote,
 } from "../../api/stock-api";
 import StatsCard from "../../components/statsCard/StatsCard";
@@ -23,16 +20,26 @@ export default function Dashboard() {
   const [stockDetails, setStockDetails] = useState({});
   const [quote, setQuote] = useState({});
   const [news, setNews] = useState([]);
-  const [sp500, setSp500] = useState({});
-  const [fundamentals, setFundamentals] = useState({});
-  const [financials, setFinancials] = useState({});
   const [detailedQuote, setDetailedQuote] = useState({});
 
+  // grab data from local storage on render
+  useEffect(() => {
+    const data1 = localStorage.getItem("detailedStockQuote");
+    if (data1 != null) setDetailedQuote(JSON.parse(data1));
+    const data2 = localStorage.getItem("stockNews");
+    if (data2 != null) setNews(JSON.parse(data2));
+    const data3 = localStorage.getItem("quote");
+    if (data3 != null) setQuote(JSON.parse(data3));
+    const data4 = localStorage.getItem("stockDetails");
+    if (data4 != null) setStockDetails(JSON.parse(data4));
+  }, []);
+
+  // fetch data when stockSymbol Changes
   useEffect(() => {
     const updateStockDetails = async () => {
       try {
         const result = await fetchStockDetails(stockSymbol);
-        setStockDetails(result);
+        localStorage.setItem("stockDetails", JSON.stringify(result));
       } catch (error) {
         setStockDetails({});
         console.log(error);
@@ -41,7 +48,7 @@ export default function Dashboard() {
     const updateStockOverview = async () => {
       try {
         const result = await fetchQuote(stockSymbol);
-        setQuote(result);
+        localStorage.setItem("quote", JSON.stringify(result));
       } catch (error) {
         setQuote({});
         console.log(error);
@@ -50,43 +57,16 @@ export default function Dashboard() {
     const updateStockNews = async () => {
       try {
         const result = await fetchStockNews(stockSymbol);
-        setNews(result);
+        localStorage.setItem("stockNews", JSON.stringify(result));
       } catch (error) {
         setNews([]);
-        console.log(error);
-      }
-    };
-    const getSP500 = async () => {
-      try {
-        const result = await fetchSP500();
-        setSp500(result);
-      } catch (error) {
-        setSp500({});
-        console.log(error);
-      }
-    };
-    const updateStockFundamentals = async () => {
-      try {
-        const result = await fetchStockFundamentals(stockSymbol);
-        setFundamentals(result);
-      } catch (error) {
-        setFundamentals({});
-        console.log(error);
-      }
-    };
-    const updateStockFinancials = async () => {
-      try {
-        const result = await fetchStockFinancials(stockSymbol);
-        setFinancials(result);
-      } catch (error) {
-        setFinancials({});
         console.log(error);
       }
     };
     const updateDetailedStockQuote = async () => {
       try {
         const result = await fetchDetailedStockQuote(stockSymbol);
-        setDetailedQuote(result);
+        localStorage.setItem("detailedStockQuote", JSON.stringify(result));
       } catch (error) {
         setDetailedQuote({});
         console.log(error);
@@ -96,10 +76,8 @@ export default function Dashboard() {
     updateStockDetails();
     updateStockOverview();
     updateDetailedStockQuote();
-    // updateStockFinancials(); //Removed to not use requests
-    // getSP500();  //Removed to not use requests
-    // updateStockFundamentals(); //Removed to not use requests
   }, [stockSymbol]);
+
   return (
     <div>
       <div className="dashboard">
