@@ -58,7 +58,7 @@ a {
   top: 0;
   display: flex;
   left: 0;
-  width: 68px;
+  width: 74px;
   //   width: calc(var(--nav-width));
   height: 100vh;
   backdrop-filter: blur(5px);
@@ -84,6 +84,10 @@ a {
 }
 .nav__logo {
   margin-bottom: 2rem;
+  border-left: 2px solid transparent;
+}
+.nav__logo:hover {
+  border-left: 2px solid #f7f6fb;
 }
 .nav__logo-icon {
   height: 1.5rem;
