@@ -79,10 +79,10 @@ a {
 .nav__logo {
   height: 3rem;
   margin-bottom: 2rem;
-  border-left: 2px solid transparent;
+  border-left: 3px solid transparent;
 }
 .nav__logo:hover {
-  border-left: 2px solid #f7f6fb;
+  border-left: 3px solid #f7f6fb;
 }
 .nav__logo-icon {
   height: 1.5rem;
@@ -119,7 +119,7 @@ a {
   height: auto;
   width: 2rem;
   padding: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
 }
 .back {
@@ -129,7 +129,7 @@ a {
   height: auto;
   width: 2rem;
   padding: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
 }
 
@@ -137,5 +137,5 @@ a {
   margin-top: 8rem;
 }
 .active {
-  border-left: 2px solid #f7f6fb;
+  border-left: 3px solid #f7f6fb;
 }
