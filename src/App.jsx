@@ -18,7 +18,9 @@ function App() {
       <div>
         <StockContext.Provider value={{ stockSymbol, setStockSymbol }}>
           <div className="app-container">
-            <Sidebar />
+            <div className="sidebar">
+              <Sidebar />
+            </div>
             <div className="app-content">
               <Routes location={location} key={location.pathname}>
                 <Route exact path="/" element={<Dashboard />} />
