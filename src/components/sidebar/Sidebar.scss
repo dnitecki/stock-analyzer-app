@@ -113,23 +113,30 @@ a {
 }
 
 .move {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
   margin-left: 42px;
   transition: 0.3s;
-  height: auto;
-  width: 2.1rem;
+  height: 2.5rem;
+  width: 2.5rem;
   padding: 0.5rem;
-  background-color: #b3c8e5;
+
+  background-color: rgba(9, 32, 63, 1);
   border-radius: 50%;
 }
 .back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
   margin-left: 148px;
   transition: 0.3s;
-  height: auto;
-  width: 2.1rem;
+  height: 2.5rem;
+  width: 2.5rem;
   padding: 0.5rem;
-  background-color: #b3c8e5;
+  background-color: rgba(9, 32, 63, 1);
   border-radius: 50%;
 }
 

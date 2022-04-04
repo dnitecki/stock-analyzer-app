@@ -14,16 +14,15 @@ class Sidebar extends Component {
         <header className="header" id="header">
           <div className="header__toggle" onClick={this.handleClick}>
             <div>
-              <img
-                className={this.state.clicked ? "move" : "back"}
-                src={
-                  this.state.clicked
-                    ? "./assets/interface-arrows-button-right.svg"
-                    : "./assets/interface-arrows-button-left.svg"
-                }
-                id="header-toggle"
-                alt="icon"
-              ></img>
+              <div className={this.state.clicked ? "move" : "back"}>
+                <i
+                  className={
+                    this.state.clicked
+                      ? "pi pi-chevron-right"
+                      : "pi pi-chevron-left"
+                  }
+                ></i>
+              </div>
             </div>
           </div>
         </header>
