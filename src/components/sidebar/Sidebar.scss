@@ -19,7 +19,7 @@ a {
 }
 .header {
   width: 100%;
-  height: var(--header-height);
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -33,18 +33,14 @@ a {
   overflow: hidden;
 }
 .header__toggle {
-  color: var(--first-color);
-  height: 1.5rem;
-  width: 1.5rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
 }
+
 .navbar {
-  position: relative;
-  top: 0;
-  left: -30%;
-  width: calc(var(--nav-width));
+  display: flex;
+  width: 180px;
   height: 100vh;
   backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.1);
@@ -54,12 +50,10 @@ a {
   overflow: hidden;
 }
 .show {
-  //   position: fixed;
   top: 0;
   display: flex;
   left: 0;
   width: 74px;
-  //   width: calc(var(--nav-width));
   height: 100vh;
   backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.1);
@@ -83,6 +77,7 @@ a {
   padding: 0.5rem 0 0.5rem 1.5rem;
 }
 .nav__logo {
+  height: 3rem;
   margin-bottom: 2rem;
   border-left: 2px solid transparent;
 }
@@ -97,14 +92,19 @@ a {
 .nav__logo-name {
   color: var(--white-color);
 }
+.nav__name {
+  font-weight: 300;
+}
 .nav__link {
   position: relative;
   color: var(--white-color) !important;
   margin-bottom: 1.5rem;
   transition: 0.3s;
+  width: 100%;
 }
 .nav__link:hover {
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .nav__icon {
   filter: invert(0.85);
@@ -113,36 +113,29 @@ a {
 }
 
 .move {
-  margin-top: 0.5rem;
-  margin-left: 10rem;
+  margin-top: 2rem;
+  margin-left: 42px;
   transition: 0.3s;
-  filter: invert(1);
+  height: auto;
+  width: 2rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
 }
 .back {
-  margin-top: 0.5rem;
-  margin-left: 1rem;
+  margin-top: 2rem;
+  margin-left: 148px;
   transition: 0.3s;
-  filter: invert(1);
+  height: auto;
+  width: 2rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
 }
-.tile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 15%;
-  background: linear-gradient(
-    -45deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.2)
-  );
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-}
-.tile:hover {
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.1);
-}
+
 .nav-list {
-  margin-top: 5rem;
+  margin-top: 8rem;
+}
+.active {
+  border-left: 2px solid #f7f6fb;
 }

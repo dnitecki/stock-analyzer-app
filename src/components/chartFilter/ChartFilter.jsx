@@ -6,7 +6,9 @@ export default function ChartFilter({ text, active, onClick }) {
     <div>
       <button
         onClick={onClick}
-        className={`filter-button ${active ? "active" : "inactive"}`}
+        className={`filter-button ${
+          active ? "active-filter" : "inactive-filter"
+        }`}
       >
         {text}
       </button>
