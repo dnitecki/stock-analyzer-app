@@ -5,18 +5,20 @@ export default function News({ news, name }) {
     <div className="card">
       <div className="news-header">News related to {name}</div>
       <div className="news-card">
-        {news.map((item) => (
-          <div className="card-news" key={item}>
-            <div className="news-content">
-              <div className="news-headline">{item?.headline}</div>
-              <img
-                className="news-image img"
-                title={item.headline}
-                src={item.image}
-                alt=""
-              ></img>
-              <div className="link"></div>
-            </div>
+        {news.map((item, index) => (
+          <div className="news-card-item" key={index}>
+            <a href={item.url} target="_blank" rel="noreferrer">
+              <div className="news-content">
+                <div className="news-headline">{item?.headline}</div>
+                <img
+                  className="news-image img"
+                  title={item.headline}
+                  src={item.image}
+                  alt=""
+                ></img>
+                <div className="link">{item.source}</div>
+              </div>
+            </a>
           </div>
         ))}
       </div>

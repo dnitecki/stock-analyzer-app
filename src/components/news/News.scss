@@ -1,12 +1,13 @@
-.card-news {
+.news-card-item {
   position: relative;
   border-radius: 5px;
   padding: 0.5rem;
   margin-bottom: 1rem;
   background-color: rgba(255, 255, 255, 0.05);
 }
-.card-news:hover {
+.news-card-item:hover {
   background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 .news-content {
   display: grid;
@@ -20,6 +21,7 @@
 .news-headline {
   grid-area: headline;
   font-size: 15px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 .news-image {
   grid-area: image;
@@ -30,6 +32,9 @@
 }
 .link {
   grid-area: link;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .news-header {
   padding-bottom: 0.75rem;
