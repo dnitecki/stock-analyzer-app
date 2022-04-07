@@ -87,25 +87,24 @@ a {
 }
 .nav__logo-icon {
   font-size: 24px;
-}
-.nav__logo-name {
-  color: var(--white-color);
+  color: rgba(255, 255, 255, 0.9);
 }
 .nav__name {
-  font-weight: 300;
+  font-weight: 500;
   font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
 }
-.nav__link {
-  position: relative;
-  color: var(--white-color) !important;
-  margin-bottom: 1.5rem;
-  transition: 0.3s;
-  width: 100%;
-}
-.nav__link:hover {
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.9);
-}
+// .nav__link {
+//   position: relative;
+//   color: var(--white-color) !important;
+//   margin-bottom: 1.5rem;
+//   transition: 0.3s;
+//   width: 100%;
+// }
+// .nav__link:hover {
+//   cursor: pointer;
+//   background-color: rgba(255, 255, 255, 0.9);
+// }
 
 .move {
   display: flex;
