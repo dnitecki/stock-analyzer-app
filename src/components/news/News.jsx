@@ -3,7 +3,10 @@ import "./News.scss";
 export default function News({ news, name }) {
   return (
     <div className="card">
-      <div className="news-header">News related to {name}</div>
+      <div className="news-header">
+        <i className="pi pi-globe news-icon" />
+        News related to {name}
+      </div>
       <div className="news-card">
         {news.map((item, index) => (
           <div className="news-card-item" key={index}>

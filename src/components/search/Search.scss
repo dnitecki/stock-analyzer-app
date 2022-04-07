@@ -71,10 +71,7 @@ button {
   align-items: center;
   justify-content: flex-end;
 }
-.clear-icon {
-  height: 1.2rem;
-  filter: invert(1);
-}
+
 .search {
   grid-area: search;
   display: flex;
@@ -88,8 +85,4 @@ button {
 }
 .search:hover {
   background-color: rgba(255, 255, 255, 0.3);
-}
-.search-icon {
-  height: 1.2rem;
-  filter: invert(1);
 }
