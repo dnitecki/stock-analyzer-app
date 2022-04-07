@@ -40,7 +40,7 @@ a {
 
 .navbar {
   display: flex;
-  width: 180px;
+  width: 170px;
   height: 100vh;
   backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.1);
@@ -82,19 +82,18 @@ a {
   border-left: 3px solid transparent;
 }
 .nav__logo:hover {
-  border-left: 3px solid #f7f6fb;
+  border-left: 3px solid rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 0.1);
 }
 .nav__logo-icon {
-  height: 1.5rem;
-  width: 1.5rem;
-  filter: invert(0.85);
+  font-size: 24px;
 }
 .nav__logo-name {
   color: var(--white-color);
 }
 .nav__name {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
 }
 .nav__link {
   position: relative;
@@ -107,23 +106,17 @@ a {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.9);
 }
-.nav__icon {
-  filter: invert(0.85);
-  height: 1.5rem;
-  width: 1.5rem;
-}
 
 .move {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  margin-left: 38px;
+  margin-left: 36px;
   transition: 0.3s;
   height: 2.5rem;
   width: 2.5rem;
   padding: 0.5rem;
-
   background-color: rgba(9, 32, 63, 1);
   border-radius: 50%;
 }
@@ -132,7 +125,7 @@ a {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  margin-left: 148px;
+  margin-left: 138px;
   transition: 0.3s;
   height: 2.5rem;
   width: 2.5rem;
@@ -145,5 +138,5 @@ a {
   margin-top: 8rem;
 }
 .active {
-  border-left: 3px solid #f7f6fb;
+  border-left: 3px solid rgba(255, 255, 255, 1);
 }

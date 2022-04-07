@@ -30,11 +30,7 @@ class Sidebar extends Component {
           <nav className="nav">
             <div className="nav-list">
               <NavLink to="/" className="nav__logo" activeClassName="active">
-                <img
-                  className="nav__logo-icon"
-                  src="./assets/interface-home-3.svg"
-                  alt="icon"
-                ></img>
+                <i className="pi pi-home nav__logo-icon" />
                 <span className="nav__name">Dashboard</span>
               </NavLink>
               <NavLink
@@ -42,11 +38,7 @@ class Sidebar extends Component {
                 className="nav__logo"
                 activeClassName="active"
               >
-                <img
-                  className="nav__icon"
-                  src="./assets/money-graph-bar.svg"
-                  alt="icon"
-                ></img>
+                <i className="pi pi-chart-bar nav__logo-icon" />
                 <span className="nav__name">Watchlist</span>
               </NavLink>
               <NavLink
@@ -54,11 +46,7 @@ class Sidebar extends Component {
                 className="nav__logo"
                 activeClassName="active"
               >
-                <img
-                  className="nav__icon"
-                  src="./assets/travel-map-flag.svg"
-                  alt="icon"
-                ></img>
+                <i className="pi pi-flag nav__logo-icon" />
                 <span className="nav__name">Report Bug</span>
               </NavLink>
             </div>
