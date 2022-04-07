@@ -21,6 +21,8 @@
 .news-headline {
   grid-area: headline;
   font-size: 15px;
+  max-height: 6rem;
+  overflow: hidden;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 .news-image {
