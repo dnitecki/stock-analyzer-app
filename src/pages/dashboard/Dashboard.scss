@@ -7,7 +7,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
-    "header header  header  header"
+    "header header  header  news"
     "chart  chart   overview  news"
     "chart  chart   details  news"
     "chart  chart   details  news"
