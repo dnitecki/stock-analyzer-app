@@ -21,7 +21,7 @@ export default function Details({ details }) {
           <li className="detailsItem" key={item}>
             <div className="details">
               <span>{detailsList[item]}</span>
-              <span>
+              <span className="info">
                 {item === "marketCapitalization"
                   ? `${convertMillionToBillion(details[item])}B`
                   : details[item]}

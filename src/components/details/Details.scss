@@ -18,3 +18,7 @@
   min-height: auto;
   grid-template-columns: 1fr 1fr;
 }
+.info {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import "./Dashboard.scss";
 import Header from "../../components/header/Header";
 // import { mockCompanyDetails } from "../../constants/mock";
-import Details from "../../components/details/Details";
 import Overview from "../../components/overview/Overview";
 import Chart from "../../components/chart/Chart";
 import News from "../../components/news/News";

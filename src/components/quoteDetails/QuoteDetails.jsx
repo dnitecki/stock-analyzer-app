@@ -18,7 +18,7 @@ export default function QuoteDetails({ stats }) {
           <li className="detailsItem" key={item}>
             <div className="details">
               <span>{QuoteDetailsList[item]}</span>
-              <span>{stats[item]}</span>
+              <span className="info">{stats[item]}</span>
             </div>
           </li>
         );
