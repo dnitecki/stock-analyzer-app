@@ -4,7 +4,7 @@
   width: 100%;
   grid-gap: 2rem;
   padding: 2rem;
-  grid-template-columns: 1fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
     "header header  header  news"
@@ -12,6 +12,23 @@
     "chart  chart   details  news"
     "chart  chart   details  news"
     "chart  chart   details  news";
+}
+@media only screen and (max-width: 1900px) {
+  .dashboard {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-gap: 2rem;
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1.2fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "header header  header  news"
+      "chart  chart   overview  news"
+      "chart  chart   details  news"
+      "chart  chart   details  news"
+      "chart  chart   details  news";
+  }
 }
 @media only screen and (max-width: 640px) {
   .dashboard {

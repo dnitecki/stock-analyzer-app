@@ -39,3 +39,24 @@
 .currency {
   font-size: 16px;
 }
+@media only screen and (min-width: 1920px) {
+  .overview-header {
+    grid-area: header;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .overview-change {
+    grid-area: change;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 24px;
+    column-gap: 0.5rem;
+  }
+  .price {
+    font-size: 24px;
+  }
+  .currency {
+    font-size: 20px;
+  }
+}
