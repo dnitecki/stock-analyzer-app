@@ -29,23 +29,15 @@ class Sidebar extends Component {
         <div id="nav-bar" className={this.state.clicked ? "show" : "navbar"}>
           <nav className="nav">
             <div className="nav-list">
-              <NavLink to="/" className="nav__logo" activeClassName="active">
+              <NavLink to="/" className="nav__logo">
                 <i className="pi pi-home nav__logo-icon" />
                 <span className="nav__name">Dashboard</span>
               </NavLink>
-              <NavLink
-                to="/watchlist"
-                className="nav__logo"
-                activeClassName="active"
-              >
+              <NavLink to="/watchlist" className="nav__logo">
                 <i className="pi pi-chart-bar nav__logo-icon" />
                 <span className="nav__name">Watchlist</span>
               </NavLink>
-              <NavLink
-                to="/reportbug"
-                className="nav__logo"
-                activeClassName="active"
-              >
+              <NavLink to="/reportbug" className="nav__logo">
                 <i className="pi pi-flag nav__logo-icon" />
                 <span className="nav__name">Report Bug</span>
               </NavLink>
