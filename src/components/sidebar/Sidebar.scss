@@ -82,8 +82,17 @@ a {
   border-left: 3px solid transparent;
 }
 .nav__logo:hover {
-  border-left: 3px solid rgba(255, 255, 255, 1);
+  border-left: 3px solid rgba(255, 255, 255, 0.6);
   color: rgba(255, 255, 255, 0.1);
+  .nav__name {
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .nav__logo-icon {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.9);
+  }
 }
 .nav__logo-icon {
   font-size: 24px;
@@ -92,7 +101,7 @@ a {
 .nav__name {
   font-weight: 500;
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.6);
 }
 // .nav__link {
 //   position: relative;
@@ -139,6 +148,11 @@ a {
 .active {
   border-left: 3px solid rgba(255, 255, 255, 1);
   .nav__logo-icon {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .nav__name {
+    font-weight: 500;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.9);
   }
 }
