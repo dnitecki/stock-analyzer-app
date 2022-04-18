@@ -87,7 +87,7 @@ a {
 }
 .nav__logo-icon {
   font-size: 24px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.6);
 }
 .nav__name {
   font-weight: 500;
@@ -138,4 +138,7 @@ a {
 }
 .active {
   border-left: 3px solid rgba(255, 255, 255, 1);
+  .nav__logo-icon {
+    color: rgba(255, 255, 255, 0.9);
+  }
 }
