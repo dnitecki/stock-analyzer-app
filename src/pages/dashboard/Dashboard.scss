@@ -8,8 +8,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
-      "header header  header  news"
-      "chart  chart   overview  news"
+      "header header  overview  news"
+      "chart  chart   details  news"
       "chart  chart   details  news"
       "chart  chart   details  news"
       "chart  chart   details  news";
@@ -25,8 +25,8 @@
     grid-template-columns: 1fr 1fr 1fr 1.2fr;
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
-      "header header  header  news"
-      "chart  chart   overview  news"
+      "header header  overview  news"
+      "chart  chart   details  news"
       "chart  chart   details  news"
       "chart  chart   details  news"
       "chart  chart   details  news";
