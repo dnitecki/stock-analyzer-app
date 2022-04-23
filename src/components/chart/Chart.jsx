@@ -7,7 +7,6 @@ import {
   createDate,
 } from "../../helpers/date-helper";
 import "./Chart.scss";
-import Card from "../card/Card";
 import {
   ResponsiveContainer,
   AreaChart,
