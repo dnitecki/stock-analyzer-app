@@ -1,8 +1,8 @@
 .overview {
   display: grid;
   height: 100%;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "header header"
     "price change";
@@ -11,38 +11,52 @@
   grid-area: header;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.7);
+  margin: 0;
 }
 .overview-price {
   grid-area: price;
   display: flex;
   column-gap: 0.5rem;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
 }
 .overview-change {
   grid-area: change;
   display: flex;
   justify-content: center;
-  align-items: baseline;
-  font-size: 20px;
-  column-gap: 0.5rem;
+  align-items: center;
 }
 .green {
-  color: lime;
+  background-color: green;
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  border-radius: 5px;
+  font-size: 25px;
+}
+.green:hover {
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 .red {
-  color: red;
+  background-color: rgb(197, 15, 15);
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  border-radius: 5px;
+  font-size: 25px;
+}
+.red:hover {
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 .price {
-  font-size: 20px;
+  font-size: 25px;
 }
 .currency {
   font-size: 16px;
+  display: flex;
 }
 @media only screen and (min-width: 1920px) {
   .overview-header {
     grid-area: header;
-    font-size: 24px;
+    font-size: 25px;
     color: rgba(255, 255, 255, 0.7);
   }
   .overview-change {
@@ -50,11 +64,11 @@
     display: flex;
     justify-content: center;
     align-items: baseline;
-    font-size: 24px;
+    font-size: 25px;
     column-gap: 0.5rem;
   }
   .price {
-    font-size: 24px;
+    font-size: 25px;
   }
   .currency {
     font-size: 20px;

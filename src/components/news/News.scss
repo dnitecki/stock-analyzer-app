@@ -9,6 +9,12 @@
   background-color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
 }
+.news-container {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+}
 .news-content {
   display: grid;
   grid-template-areas:
@@ -16,7 +22,7 @@
     "image  link";
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 3fr 1fr;
-  column-gap: 1rem;
+  column-gap: 0.5rem;
 }
 .news-headline {
   grid-area: headline;

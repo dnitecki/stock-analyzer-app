@@ -1,5 +1,6 @@
 import React from "react";
 import "./Overview.scss";
+import { useState } from "react";
 
 export default function Overview({
   symbol,
@@ -8,6 +9,10 @@ export default function Overview({
   changePercent,
   currency,
 }) {
+  const [active, setActive] = useState(false);
+  const clicked = () => {
+    setActive(!active);
+  };
   return (
     <div className="card">
       <div className="overview">
@@ -17,7 +22,16 @@ export default function Overview({
           <span className="currency">{currency}</span>
         </span>
         <span className="overview-change">
-          {change > 0 ? (
+          {active ? (
+            <button onClick={clicked} className={change > 0 ? "green" : "red"}>
+              $ {change?.toFixed(2)}
+            </button>
+          ) : (
+            <button onClick={clicked} className={change > 0 ? "green" : "red"}>
+              {changePercent?.toFixed(2)} %
+            </button>
+          )}
+          {/* {change > 0 ? (
             <i className="pi pi-caret-up green" />
           ) : (
             <i className="pi pi-caret-down red" />
@@ -25,7 +39,7 @@ export default function Overview({
           <span className={change > 0 ? "green" : "red"}>
             ${change?.toFixed(2)}
           </span>
-          <span>({changePercent?.toFixed(2)}%)</span>
+          <span>({changePercent?.toFixed(2)}%)</span> */}
         </span>
       </div>
     </div>
