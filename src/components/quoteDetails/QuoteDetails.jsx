@@ -24,7 +24,7 @@ export default function QuoteDetails({ stats }) {
               <span className="quoteItem">52 Week High</span>
               <span className="quoteStat">$ {stats.week52High}</span>
             </div>
-            <div className="quoteDetail">
+            <div className="quoteDetail-last">
               <span className="quoteItem">52 Week Low</span>
               <span className="quoteStat">$ {stats.week52Low}</span>
             </div>
@@ -38,7 +38,7 @@ export default function QuoteDetails({ stats }) {
               <span className="quoteItem">Volume</span>
               <span className="quoteStat">{stats.iexVolume}</span>
             </div>
-            <div className="quoteDetail">
+            <div className="quoteDetail-last">
               <span className="quoteItem">Avg. Volume</span>
               <span className="quoteStat">{stats.avgTotalVolume}</span>
             </div>

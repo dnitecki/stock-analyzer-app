@@ -19,12 +19,14 @@
   column-gap: 0.5rem;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 .overview-change {
   grid-area: change;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 .green {
   background-color: rgb(63, 195, 128);
@@ -54,24 +56,24 @@
   font-weight: 300;
   display: flex;
 }
-@media only screen and (min-width: 1920px) {
-  .overview-header {
-    grid-area: header;
-    font-size: 25px;
-    color: rgba(255, 255, 255, 0.7);
-  }
-  .overview-change {
-    grid-area: change;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    font-size: 25px;
-    column-gap: 0.5rem;
-  }
-  .price {
-    font-size: 25px;
-  }
-  .currency {
-    font-size: 20px;
-  }
-}
+// @media only screen and (min-width: 1920px) {
+//   .overview-header {
+//     grid-area: header;
+//     font-size: 25px;
+//     color: rgba(255, 255, 255, 0.7);
+//   }
+//   .overview-change {
+//     grid-area: change;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-size: 25px;
+//     column-gap: 0.5rem;
+//   }
+//   .price {
+//     font-size: 25px;
+//   }
+//   .currency {
+//     font-size: 20px;
+//   }
+// }
