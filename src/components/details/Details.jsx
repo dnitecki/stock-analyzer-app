@@ -15,21 +15,25 @@ export default function Details({ details }) {
     return (number / 1000).toFixed(2);
   };
   return (
-    <ul className="detailsList">
-      {Object.keys(detailsList).map((item) => {
-        return (
-          <li className="detailsItem" key={item}>
-            <div className="details">
-              <span>{detailsList[item]}</span>
-              <span className="info">
-                {item === "marketCapitalization"
-                  ? `${convertMillionToBillion(details[item])}B`
-                  : details[item]}
-              </span>
-            </div>
-          </li>
-        );
-      })}
-    </ul>
+    <div className="card">
+      <div className="detailsList-container">
+        <ul className="detailsList">
+          {Object.keys(detailsList).map((item) => {
+            return (
+              <li className="detailsItem" key={item}>
+                <div className="details">
+                  <span>{detailsList[item]}</span>
+                  <span className="info">
+                    {item === "marketCapitalization"
+                      ? `${convertMillionToBillion(details[item])}B`
+                      : details[item]}
+                  </span>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
   );
 }

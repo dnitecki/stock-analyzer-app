@@ -22,3 +22,9 @@
   display: flex;
   justify-content: flex-end;
 }
+.detailsList-container {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+}

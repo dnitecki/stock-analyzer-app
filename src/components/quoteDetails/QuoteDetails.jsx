@@ -12,17 +12,39 @@ export default function QuoteDetails({ stats }) {
   };
 
   return (
-    <ul className="detailsList">
-      {Object.keys(QuoteDetailsList).map((item) => {
-        return (
-          <li className="detailsItem" key={item}>
-            <div className="details">
-              <span>{QuoteDetailsList[item]}</span>
-              <span className="info">{stats[item]}</span>
+    <div className="card">
+      <div className="details-container">
+        <div className="quoteDetailsList">
+          <div className="left-column">
+            <div className="quoteDetail">
+              <span className="quoteItem">Open</span>
+              <span className="quoteStat">$ {stats.iexOpen}</span>
             </div>
-          </li>
-        );
-      })}
-    </ul>
+            <div className="quoteDetail">
+              <span className="quoteItem">52 Week High</span>
+              <span className="quoteStat">$ {stats.week52High}</span>
+            </div>
+            <div className="quoteDetail">
+              <span className="quoteItem">52 Week Low</span>
+              <span className="quoteStat">$ {stats.week52Low}</span>
+            </div>
+          </div>
+          <div className="right-column">
+            <div className="quoteDetail">
+              <span className="quoteItem">P/E</span>
+              <span className="quoteStat">{stats.peRatio}</span>
+            </div>
+            <div className="quoteDetail">
+              <span className="quoteItem">Volume</span>
+              <span className="quoteStat">{stats.iexVolume}</span>
+            </div>
+            <div className="quoteDetail">
+              <span className="quoteItem">Avg. Volume</span>
+              <span className="quoteStat">{stats.avgTotalVolume}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

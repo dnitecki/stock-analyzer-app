@@ -12,7 +12,8 @@ import {
   fetchStockNews,
   fetchDetailedStockQuote,
 } from "../../api/stock-api";
-import StatsCard from "../../components/statsCard/StatsCard";
+import QuoteDetails from "../../components/quoteDetails/QuoteDetails";
+import Details from "../../components/details/Details";
 
 export default function Dashboard() {
   const { stockSymbol } = useContext(StockContext);
@@ -90,6 +91,9 @@ export default function Dashboard() {
         <div className="dashboard-chart">
           <Chart />
         </div>
+        <div className="dashboard-info">
+          <QuoteDetails stats={detailedQuote} />
+        </div>
         <div className="dashboard-overview">
           <Overview
             symbol={stockSymbol}
@@ -100,7 +104,7 @@ export default function Dashboard() {
           />
         </div>
         <div className="dashboard-details">
-          <StatsCard details={stockDetails} stats={detailedQuote} />
+          <Details details={stockDetails} />
         </div>
         <div className="dashboard-news">
           <News news={news} name={stockDetails.name} />

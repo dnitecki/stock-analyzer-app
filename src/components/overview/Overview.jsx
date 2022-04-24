@@ -31,15 +31,6 @@ export default function Overview({
               {changePercent?.toFixed(2)} %
             </button>
           )}
-          {/* {change > 0 ? (
-            <i className="pi pi-caret-up green" />
-          ) : (
-            <i className="pi pi-caret-down red" />
-          )}
-          <span className={change > 0 ? "green" : "red"}>
-            ${change?.toFixed(2)}
-          </span>
-          <span>({changePercent?.toFixed(2)}%)</span> */}
         </span>
       </div>
     </div>

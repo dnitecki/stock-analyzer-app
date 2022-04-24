@@ -12,7 +12,7 @@
       "chart  chart   details  news"
       "chart  chart   details  news"
       "chart  chart   details  news"
-      "chart  chart   details  news";
+      "info   info   details  news";
   }
 }
 @media only screen and (max-width: 1900px) {
@@ -29,7 +29,7 @@
       "chart  chart   details  news"
       "chart  chart   details  news"
       "chart  chart   details  news"
-      "chart  chart   details  news";
+      "info   info   details  news";
   }
 }
 @media only screen and (max-width: 640px) {
@@ -69,4 +69,7 @@
 }
 .dashboard-news {
   grid-area: news;
+}
+.dashboard-info {
+  grid-area: info;
 }
