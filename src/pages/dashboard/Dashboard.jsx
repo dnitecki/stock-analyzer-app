@@ -32,7 +32,7 @@ export default function Dashboard() {
     if (data3 != null) setQuote(JSON.parse(data3));
     const data4 = localStorage.getItem("stockDetails");
     if (data4 != null) setStockDetails(JSON.parse(data4));
-  }, [stockSymbol]);
+  }, []);
 
   // fetch data when stockSymbol Changes
   useEffect(() => {
