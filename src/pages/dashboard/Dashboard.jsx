@@ -32,7 +32,7 @@ export default function Dashboard() {
     if (data3 != null) setQuote(JSON.parse(data3));
     const data4 = localStorage.getItem("stockDetails");
     if (data4 != null) setStockDetails(JSON.parse(data4));
-  }, []);
+  }, [stockSymbol]);
 
   // fetch data when stockSymbol Changes
   useEffect(() => {
@@ -108,6 +108,9 @@ export default function Dashboard() {
         </div>
         <div className="dashboard-news">
           <News news={news} name={stockDetails.name} />
+        </div>
+        <div className="dashboard-rating">
+          <div className="card"></div>
         </div>
       </div>
     </div>

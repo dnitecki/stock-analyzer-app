@@ -16,13 +16,14 @@ export default function Details({ details }) {
   };
   return (
     <div className="card">
+      <div className="details-header">Company Info</div>
       <div className="detailsList-container">
         <ul className="detailsList">
           {Object.keys(detailsList).map((item) => {
             return (
               <li className="detailsItem" key={item}>
                 <div className="details">
-                  <span>{detailsList[item]}</span>
+                  <span className="item">{detailsList[item]}</span>
                   <span className="info">
                     {item === "marketCapitalization"
                       ? `${convertMillionToBillion(details[item])}B`

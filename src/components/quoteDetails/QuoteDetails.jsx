@@ -2,15 +2,6 @@ import React from "react";
 import "./QuoteDetails.scss";
 
 export default function QuoteDetails({ stats }) {
-  const QuoteDetailsList = {
-    iexOpen: "Open",
-    week52High: "52 Week High",
-    week52Low: "52 Week Low",
-    peRatio: "P/E Ratio",
-    iexVolume: "Volume",
-    avgTotalVolume: "Average Volume",
-  };
-
   return (
     <div className="card">
       <div className="details-container">
