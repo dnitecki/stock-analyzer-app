@@ -23,6 +23,7 @@ export default function Dashboard() {
   const [detailedQuote, setDetailedQuote] = useState({});
 
   // grab data from local storage on render
+  /*
   useEffect(() => {
     const data1 = localStorage.getItem("detailedStockQuote");
     if (data1 != null) setDetailedQuote(JSON.parse(data1));
@@ -33,13 +34,17 @@ export default function Dashboard() {
     const data4 = localStorage.getItem("stockDetails");
     if (data4 != null) setStockDetails(JSON.parse(data4));
   }, []);
+  */
 
   // fetch data when stockSymbol Changes
   useEffect(() => {
+
+    if (!stockSymbol) return;
+
     const updateStockDetails = async () => {
       try {
         const result = await fetchStockDetails(stockSymbol);
-        localStorage.setItem("stockDetails", JSON.stringify(result));
+        setStockDetails(result);
       } catch (error) {
         setStockDetails({});
         console.log(error);
@@ -48,7 +53,7 @@ export default function Dashboard() {
     const updateStockOverview = async () => {
       try {
         const result = await fetchQuote(stockSymbol);
-        localStorage.setItem("quote", JSON.stringify(result));
+        setQuote(result);
       } catch (error) {
         setQuote({});
         console.log(error);
@@ -57,7 +62,7 @@ export default function Dashboard() {
     const updateStockNews = async () => {
       try {
         const result = await fetchStockNews(stockSymbol);
-        localStorage.setItem("stockNews", JSON.stringify(result));
+        setNews(result);
       } catch (error) {
         setNews([]);
         console.log(error);
@@ -66,7 +71,7 @@ export default function Dashboard() {
     const updateDetailedStockQuote = async () => {
       try {
         const result = await fetchDetailedStockQuote(stockSymbol);
-        localStorage.setItem("detailedStockQuote", JSON.stringify(result));
+        setDetailedQuote(result);
       } catch (error) {
         setDetailedQuote({});
         console.log(error);
