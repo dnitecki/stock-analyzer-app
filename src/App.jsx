@@ -10,6 +10,7 @@ import { useState } from "react";
 import StockContext from "./components/context/StockContext";
 import Sidebar from "./components/sidebar/Sidebar";
 
+
 function App() {
   const location = useLocation();
   const [stockSymbol, setStockSymbol] = useState("INTC");
